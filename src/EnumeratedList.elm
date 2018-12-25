@@ -50,7 +50,7 @@ updateAtItem item f (EnumeratedList xs) =
                     []
 
                 y :: ys ->
-                    if i == y.position then
+                    if i == item.position then
                         case f y of
                             Nothing ->
                                 List.map .element ys
