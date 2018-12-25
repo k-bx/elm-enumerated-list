@@ -32,8 +32,9 @@ toList (EnumeratedList xs) =
 
 
 map : (EnumeratedItem a -> b) -> EnumeratedList a -> EnumeratedList b
-map =
-    Debug.todo "todo"
+map f (EnumeratedList xs) =
+    fromList <|
+        List.map (\item -> f item) xs
 
 
 updateAtItem :
